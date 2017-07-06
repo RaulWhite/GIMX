@@ -222,6 +222,32 @@ static struct
         .size = XONE_USB_INTERRUPT_PACKET_SIZE
       }
     }
+  },
+  [C_TYPE_XBOX_PAD] =
+  {
+    .name = XBOX_DEVICE_NAME,
+    .ids =
+    {
+        { .vendor = XBOX_VENDOR, .product = XBOX_PRODUCT }
+    },
+    .configuration = 1,
+    .endpoints =
+    {
+      .in =
+      {
+        .address = XBOX_USB_INTERRUPT_ENDPOINT_IN | USB_DIR_IN,
+        .size = XBOX_USB_INTERRUPT_PACKET_SIZE,
+        .reports =
+        {
+          .nb = 0,
+        }
+      },
+      .out =
+      {
+        .address = XBOX_USB_INTERRUPT_ENDPOINT_OUT | USB_DIR_OUT,
+        .size = XBOX_USB_INTERRUPT_PACKET_SIZE
+      }
+    }
   }
 };
 

@@ -8,6 +8,15 @@
 
 #include <defs.h>
 
+#define XBOX_USB_INTERRUPT_ENDPOINT_IN  1
+#define XBOX_USB_INTERRUPT_ENDPOINT_OUT 2
+#define XBOX_USB_INTERRUPT_PACKET_SIZE 32
+
+#define XBOX_DEVICE_NAME "Xbox Controller S"
+
+#define XBOX_VENDOR  0x045e
+#define XBOX_PRODUCT 0x0289
+
 #define XBOX_UP_MASK    0x01
 #define XBOX_DOWN_MASK  0x02
 #define XBOX_LEFT_MASK  0x04
