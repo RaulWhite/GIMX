@@ -236,13 +236,17 @@ static void cal_display()
     ginfo(_("shape:"));
     if (mcal->dzs)
     {
-      if (*mcal->dzs == E_SHAPE_CIRCLE)
+      switch (*mcal->dzs)
       {
+      case E_SHAPE_CIRCLE:
         ginfo(_(" Circle\n"));
-      }
-      else
-      {
+        break;
+      case E_SHAPE_RECTANGLE:
         ginfo(_(" Rectangle\n"));
+        break;
+      case E_SHAPE_CROSS:
+        ginfo(_(" Cross\n"));
+        break;
       }
     }
     else
@@ -529,13 +533,17 @@ void cal_button(int button)
         case DZS:
           if (mcal->dzs)
           {
-            if (*mcal->dzs == E_SHAPE_CIRCLE)
+            switch (*mcal->dzs)
             {
+            case E_SHAPE_CIRCLE:
               *mcal->dzs = E_SHAPE_RECTANGLE;
-            }
-            else
-            {
+              break;
+            case E_SHAPE_RECTANGLE:
+              *mcal->dzs = E_SHAPE_CROSS;
+              break;
+            case E_SHAPE_CROSS:
               *mcal->dzs = E_SHAPE_CIRCLE;
+              break;
             }
             mc->merge[mc->index].x = 1;
             mc->merge[mc->index].y = 1;
@@ -631,13 +639,17 @@ void cal_button(int button)
         case DZS:
           if (mcal->dzs)
           {
-            if (*mcal->dzs == E_SHAPE_CIRCLE)
+            switch (*mcal->dzs)
             {
-              *mcal->dzs = E_SHAPE_RECTANGLE;
-            }
-            else
-            {
+            case E_SHAPE_CIRCLE:
+              *mcal->dzs = E_SHAPE_CROSS;
+              break;
+            case E_SHAPE_RECTANGLE:
               *mcal->dzs = E_SHAPE_CIRCLE;
+              break;
+            case E_SHAPE_CROSS:
+              *mcal->dzs = E_SHAPE_RECTANGLE;
+              break;
             }
             mc->merge[mc->index].x = -1;
             mc->merge[mc->index].y = -1;

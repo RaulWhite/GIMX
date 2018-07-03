@@ -181,6 +181,8 @@ static int ProcessDeviceElement(xmlNode * a_node)
     }
   }
 
+  xmlFree(type);
+
   return ret;
 }
 

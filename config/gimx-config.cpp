@@ -264,6 +264,10 @@ string configFrame::reverseTranslate(string str)
   {
     return "Rectangle";
   }
+  if(wxStr == _("Cross"))
+  {
+    return "Cross";
+  }
   if(wxStr == _("mouse"))
   {
     return "mouse";
@@ -1189,6 +1193,7 @@ configFrame::configFrame(wxString file,wxWindow* parent, wxWindowID id __attribu
     AxisTabShape->SetSelection( AxisTabShape->Append(wxEmptyString) );
     AxisTabShape->Append(_("Circle"));
     AxisTabShape->Append(_("Rectangle"));
+    AxisTabShape->Append(_("Cross"));
     AxisTabShape->Disable();
     FlexGridSizer30->Add(AxisTabShape, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     FlexGridSizer3->Add(FlexGridSizer30, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);

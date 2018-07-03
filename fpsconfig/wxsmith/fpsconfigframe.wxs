@@ -358,6 +358,7 @@
 				<content>
 					<item>Circle</item>
 					<item>Rectangle</item>
+					<item>Cross</item>
 				</content>
 				<selection>0</selection>
 				<pos>230,320</pos>
@@ -368,6 +369,7 @@
 				<content>
 					<item>Circle</item>
 					<item>Rectangle</item>
+					<item>Cross</item>
 				</content>
 				<selection>0</selection>
 				<pos>230,352</pos>

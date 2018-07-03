@@ -1058,11 +1058,11 @@ static void mouse2axis1d(int device, s_adapter* controller, const s_mapper * map
   }
 }
 
-static double update_axis(int * axis, double dead_zone, double z, double max_axis, double min_axis)
+static double update_axis(int * axis, double dead_zone, double z, double max_axis, double min_axis, e_shape shape)
 {
   double raw = z;
 
-  if (fabs(z) >= 1)
+  if (fabs(z) >= 1 || shape == E_SHAPE_CROSS)
   {
     raw = z + dead_zone;
   }
@@ -1240,8 +1240,8 @@ static void mouse2axis2d(int device, s_adapter* controller, const s_mapper * map
   double z_y = multipliers.y * copysign(z * angle_sin, input->y);
 
   s_vector raw_output;
-  raw_output.x = update_axis(axis_x, dead_zones.x, z_x, max_axis, min_axis);
-  raw_output.y = update_axis(axis_y, dead_zones.y, z_y, max_axis, min_axis);
+  raw_output.x = update_axis(axis_x, dead_zones.x, z_x, max_axis, min_axis, shape);
+  raw_output.y = update_axis(axis_y, dead_zones.y, z_y, max_axis, min_axis, shape);
 
   if (gimx_params.subpositions && mc->change)
   {

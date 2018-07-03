@@ -141,9 +141,13 @@ void display_calibration()
     {
       waddstr(wcal, _("circle"));
     }
-    else
+    else if (*mcal->dzs == E_SHAPE_RECTANGLE)
     {
       waddstr(wcal, _("rectangle"));
+    }
+    else if (*mcal->dzs == E_SHAPE_CROSS)
+    {
+      waddstr(wcal, _("cross"));
     }
   }
   else

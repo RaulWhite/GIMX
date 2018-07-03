@@ -383,6 +383,10 @@ static int ProcessEventElement(xmlNode * a_node, unsigned char mapper)
         {
           entry.params.mapper.shape = E_SHAPE_RECTANGLE;
         }
+        else if (!strncmp(shape, X_ATTR_VALUE_CROSS, strlen(X_ATTR_VALUE_CROSS)))
+        {
+          entry.params.mapper.shape = E_SHAPE_CROSS;
+        }
       }
       xmlFree(shape);
       /* for compatibility with old configurations */
@@ -763,6 +767,10 @@ static int ProcessIntensityElement(xmlNode * a_node, s_intensity* intensity)
         if (!strncmp(shape, X_ATTR_VALUE_RECTANGLE, strlen(X_ATTR_VALUE_RECTANGLE)))
         {
           intensity->params.shape = E_SHAPE_RECTANGLE;
+        }
+        else if (!strncmp(shape, X_ATTR_VALUE_CROSS, strlen(X_ATTR_VALUE_CROSS)))
+        {
+          intensity->params.shape = E_SHAPE_CROSS;
         }
         else
         {

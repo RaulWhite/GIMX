@@ -49,6 +49,7 @@
 #define X_ATTR_VALUE_AXIS_UP "axis up"
 #define X_ATTR_VALUE_CIRCLE "Circle"
 #define X_ATTR_VALUE_RECTANGLE "Rectangle"
+#define X_ATTR_VALUE_CROSS "Cross"
 #define X_ATTR_VALUE_YES "yes"
 #define X_ATTR_VALUE_NO "no"
 

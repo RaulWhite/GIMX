@@ -1716,6 +1716,7 @@
 															<item></item>
 															<item>Circle</item>
 															<item>Rectangle</item>
+															<item>Cross</item>
 														</content>
 														<selection>0</selection>
 														<enabled>0</enabled>

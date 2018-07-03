@@ -39,7 +39,8 @@ typedef enum
 typedef enum
 {
     E_SHAPE_CIRCLE,
-    E_SHAPE_RECTANGLE
+    E_SHAPE_RECTANGLE,
+    E_SHAPE_CROSS
 }e_shape;
 
 typedef struct

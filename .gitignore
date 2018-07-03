@@ -51,6 +51,9 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+# translation files
+*.mo
+
 launcher/gimx-launcher
 config/gimx-config
 fpsconfig/gimx-fpsconfig

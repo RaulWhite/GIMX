@@ -63,6 +63,10 @@ string fpsconfigFrame::reverseTranslate(string str)
   {
     return "Rectangle";
   }
+  if(wxStr == _("Cross"))
+  {
+    return "Cross";
+  }
 
   return str;
 }
@@ -361,10 +365,12 @@ fpsconfigFrame::fpsconfigFrame(wxString file,wxWindow* parent,wxWindowID id __at
     ChoiceDeadZoneShapeHipFire = new wxChoice(Panel1, ID_CHOICE2, wxPoint(230,320), wxSize(80,-1), 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE2"));
     ChoiceDeadZoneShapeHipFire->SetSelection( ChoiceDeadZoneShapeHipFire->Append(_("Circle")) );
     ChoiceDeadZoneShapeHipFire->Append(_("Rectangle"));
+    ChoiceDeadZoneShapeHipFire->Append(_("Cross"));
     ChoiceDeadZoneShapeHipFire->SetToolTip(_("Dead zone shape (Hip Fire)"));
     ChoiceDeadZoneShapeADS = new wxChoice(Panel1, ID_CHOICE1, wxPoint(230,352), wxSize(80,-1), 0, 0, 0, wxDefaultValidator, _T("ID_CHOICE1"));
     ChoiceDeadZoneShapeADS->SetSelection( ChoiceDeadZoneShapeADS->Append(_("Circle")) );
     ChoiceDeadZoneShapeADS->Append(_("Rectangle"));
+    ChoiceDeadZoneShapeADS->Append(_("Cross"));
     ChoiceDeadZoneShapeADS->SetToolTip(_("Dead zone shape (ADS)"));
     TextCtrlXyRatioHipFire = new wxTextCtrl(Panel1, ID_TEXTCTRL1, wxEmptyString, wxPoint(438,320), wxSize(50,-1), wxTE_PROCESS_ENTER, wxDefaultValidator, _T("ID_TEXTCTRL1"));
     TextCtrlXyRatioHipFire->SetToolTip(_("x/y ratio (Hip Fire)"));
