@@ -1093,7 +1093,7 @@ void update_residue(double axis_scale, const s_mapper * mapper_x, const s_mapper
     };
     e_shape shape = mapper_x->shape;
 
-    if (zx == 0)
+    if (zx == 0 || input->x == 0)
     {
       zy -= dead_zones.y;
       if (zy < 0)
@@ -1102,7 +1102,7 @@ void update_residue(double axis_scale, const s_mapper * mapper_x, const s_mapper
       }
       input_trunk.y = copysign(pow(zy / (fabs(multipliers->y) * pow(gimx_params.frequency_scale, exponent)), 1 / exponent), multipliers->y * output_raw->y);
     }
-    else if (zy == 0)
+    else if (zy == 0 || input->y == 0)
     {
       zx -= dead_zones.x;
       if (zx < 0)
