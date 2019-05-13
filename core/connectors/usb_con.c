@@ -109,6 +109,36 @@ static struct
         .size = DS4_USB_INTERRUPT_PACKET_SIZE
       }
     }
+  },
+  {
+    .name = DS4_DEVICE_NAME,
+    .ids =
+        { .vendor = DS4_COMP_VENDOR, .product = DS4_COMP_PRODUCT },
+    .configuration = 1,
+    .endpoints =
+    {
+      .in =
+      {
+        .address = DS4_USB_INTERRUPT_ENDPOINT_IN | USB_DIR_IN,
+        .size = DS4_USB_INTERRUPT_PACKET_SIZE,
+        .reports =
+        {
+          .nb = 1,
+          .elements =
+          {
+            {
+              .report_id = DS4_USB_HID_IN_REPORT_ID,
+              .report_length = DS4_USB_INTERRUPT_PACKET_SIZE
+            }
+          }
+        }
+      },
+      .out =
+      {
+        .address = DS4_USB_INTERRUPT_ENDPOINT_OUT | USB_DIR_OUT,
+        .size = DS4_USB_INTERRUPT_PACKET_SIZE
+      }
+    }
   }, },
   [C_TYPE_T300RS_PS4] =
   { {
@@ -170,6 +200,36 @@ static struct
         .size = DS4_USB_INTERRUPT_PACKET_SIZE
       }
     }
+  },
+  {
+    .name = DS4_DEVICE_NAME,
+    .ids =
+        { .vendor = DS4_COMP_VENDOR, .product = DS4_COMP_PRODUCT },
+    .configuration = 1,
+    .endpoints =
+    {
+      .in =
+      {
+        .address = DS4_USB_INTERRUPT_ENDPOINT_IN | USB_DIR_IN,
+        .size = DS4_USB_INTERRUPT_PACKET_SIZE,
+        .reports =
+        {
+          .nb = 1,
+          .elements =
+          {
+            {
+              .report_id = DS4_USB_HID_IN_REPORT_ID,
+              .report_length = DS4_USB_INTERRUPT_PACKET_SIZE
+            }
+          }
+        }
+      },
+      .out =
+      {
+        .address = DS4_USB_INTERRUPT_ENDPOINT_OUT | USB_DIR_OUT,
+        .size = DS4_USB_INTERRUPT_PACKET_SIZE
+      }
+    }
   }, },
   [C_TYPE_G29_PS4] =
   { {
@@ -206,6 +266,36 @@ static struct
   .name = DS4_DEVICE_NAME,
   .ids =
       { .vendor = DS4_VENDOR, .product = DS4_PRODUCT_2 },
+  .configuration = 1,
+  .endpoints =
+  {
+    .in =
+    {
+      .address = DS4_USB_INTERRUPT_ENDPOINT_IN | USB_DIR_IN,
+      .size = DS4_USB_INTERRUPT_PACKET_SIZE,
+      .reports =
+      {
+        .nb = 1,
+        .elements =
+        {
+          {
+            .report_id = DS4_USB_HID_IN_REPORT_ID,
+            .report_length = DS4_USB_INTERRUPT_PACKET_SIZE
+          }
+        }
+      }
+    },
+    .out =
+    {
+      .address = DS4_USB_INTERRUPT_ENDPOINT_OUT | USB_DIR_OUT,
+      .size = DS4_USB_INTERRUPT_PACKET_SIZE
+    }
+  }
+  },
+  {
+  .name = DS4_DEVICE_NAME,
+  .ids =
+      { .vendor = DS4_COMP_VENDOR, .product = DS4_COMP_PRODUCT },
   .configuration = 1,
   .endpoints =
   {

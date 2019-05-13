@@ -24,6 +24,10 @@
 #define DS4_PRODUCT 0x05c4
 #define DS4_PRODUCT_2 0x09cc
 
+// Include compatible PS4 controller (Hori Mini in this example)
+#define DS4_COMP_VENDOR 0x0f0d
+#define DS4_COMP_PRODUCT 0x00ee
+
 #define DS4_UP_MASK         0x01
 #define DS4_RIGHT_MASK      0x02
 #define DS4_DOWN_MASK       0x04

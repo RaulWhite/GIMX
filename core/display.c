@@ -8,7 +8,10 @@
 #ifdef WIN32
 #include <cursesw.h>
 #else
-#include <ncursesw/ncurses.h>
+// Fix dependency for ncurses package on Arch Linux's core repo
+#include <ncurses.h>
+// For other distros, stick with libncursesw
+// #include <ncursesw/ncurses.h>
 #endif
 
 #include "display.h"

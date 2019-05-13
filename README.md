@@ -1,7 +1,11 @@
 GIMX
 ====
+This fork contains the following modifications:
 
-[![Build Status](https://travis-ci.com/matlo/GIMX.svg?branch=master)](https://travis-ci.com/matlo/GIMX)
+- Added support for host PS4 controllers over USB (Hori Mini in this case). Feel free to change it for your controller's USB ID.
+- Changed ncurses dependency for Arch Linux based distros. Tested with `ncurses` package from Arch Linux's Core repo.
+
+----
 
 GIMX stands for `Game Input MultipleXer` or `Game Input MatriX`.  
 The purpose of this software is to control a video game console with a computer (e.g. a PC or a [Raspberry Pi](http://www.raspberrypi.org/)).  
